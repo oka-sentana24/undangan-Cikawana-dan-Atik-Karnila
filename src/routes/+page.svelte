@@ -62,62 +62,46 @@
 			description: 'image1'
 		}
 	];
-	let isOpen = false;
-	let carousel;
+	let isOpen = true;
+	// let carousel;
 </script>
 
 <section>
-	<div class="relative">
-		<img src={Images_home} alt="home" class="h-screen w-full object-cover" />
-		<div class=" grid gap-2 absolute bottom-[60px] w-full">
-			<div class=" text-center text-white">
-				<span> We Are Getting Married </span>
-				<h1 class="text-[#DAA520]">Cikawana & Atik Karnila</h1>
-			</div>
-			<div class="text-center text-white">
-				<span> Kepada Bapak/Ibu/Saudara/i </span>
-				<h2 class="text-2xl">OKA</h2>
-				<span> Gianyar | 26 Desember 2022 </span>
-			</div>
-			<div class="text-center text-white mt-5">
-				<button class="border border-[#676565] p-3 w-52" on:click={() => (isOpen = !isOpen)}
-					>Buka Undangan</button
-				>
-			</div>
-		</div>
-	</div>
-
 	{#if isOpen}
-		<div
-			class="bg-[#211F2F] h-[223px] w-full absolute top-0"
-			transition:fly={{ y: 200, duration: 2000 }}
-		>
-			<img src={Ukiran} alt="ukiran" />
+		<div class="relative z-10" transition:fly={{ y: 200, duration: 2000 }}>
+			<img src={Images_home} alt="home" class="h-screen w-full object-cover" />
 			<div class=" grid gap-2 absolute bottom-[60px] w-full">
 				<div class=" text-center text-white">
+					<span> We Are Getting Married </span>
+					<h1 class="text-[#DAA520]">Cikawana & Atik Karnila</h1>
+				</div>
+				<div class="text-center text-white">
+					<span> Kepada Bapak/Ibu/Saudara/i </span>
+					<h2 class="text-2xl">OKA</h2>
+					<span> Gianyar | 26 Desember 2022 </span>
+				</div>
+				<div class="text-center text-white mt-5">
+					<button class="border border-[#676565] p-3 w-52" on:click={() => (isOpen = !isOpen)}
+						>Buka Undangan</button
+					>
+				</div>
+			</div>
+		</div>
+	{/if}
+
+	<div class="absolute top-0 w-full">
+		<div class="bg-black">
+			<div class="relative">
+				<img src={Ukiran} alt="ukiran" class="w-full" />
+				<div class=" text-center text-white absolute bottom-[49px] w-full">
 					<span> We Are Getting Married </span>
 					<h1 class="text-[#DAA520]">Cikawana & Atik Karnila</h1>
 					<span> Gianyar | 26 Desember 2022 </span>
 				</div>
 			</div>
 			<div class="relative">
-				<img src={Slide1} alt="" />
-				<!-- <Carousel
-					bind:this={carousel}
-					let:loaded
-					autoplay
-					autoplayDuration={3000}
-					autoplayProgressVisible
-				>
-					{#each slideShow as src, imageIndex (src)}
-						<div class="img-container">
-							{#if loaded.includes(imageIndex)}
-								<img src={src.url} alt={src.description} class="h-[74vh] object-cover w-full" />
-							{/if}
-						</div>
-					{/each}
-				</Carousel> -->
-				<div class="absolute bottom-[30px] text-center text-white px-5">
+				<img src={Slide1} alt="slide 1" />
+				<div class="absolute bottom-0 p-5 text-center text-white">
 					" Ya Tuhan, anugerahkanlah kepada pasangan pengantin ini kebahagiaan, keduanya tiada
 					terpisahkan dan panjang umur. Semoga pengantin ini dianugerahkan putra dan cucu yang
 					memberikan penghiburan, tinggal di rumah yang penuh kegembiraan.
@@ -125,74 +109,73 @@
 					" - Rg Veda X.85.42 -
 				</div>
 			</div>
-			<div class=" bg-[#D9D9D9] h-[190vh]">
-				<div class=" flex items-center justify-center py-10 px-5">
-					<img src={Omswatiastu} alt="omswatiastu" />
+		</div>
+		<div class=" bg-[#D9D9D9] h-[190vh]">
+			<div class=" flex items-center justify-center py-10 px-5">
+				<img src={Omswatiastu} alt="omswatiastu" />
+			</div>
+			<div class="text-center px-5">
+				Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/ Tuhan Yang Maha Esa, kami
+				bermaksud mengundang Bapak/ Ibu/ Saudara/ i pada Upacara Manusa Yadnya Pawiwahan lan
+				Mepandes putra dan putri kami.
+			</div>
+			<h1 class="text-center pt-5">Mempelai</h1>
+			<div class="flex items-center justify-center">
+				<img src={Line} alt="line" />
+			</div>
+			<div class="bg-white rounded-md mx-5 h-[60vh]">
+				<div class="flex items-center justify-center ">
+					<img src={Cik} alt="cik" />
 				</div>
-				<div class="text-center px-5">
-					Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/ Tuhan Yang Maha Esa, kami
-					bermaksud mengundang Bapak/ Ibu/ Saudara/ i pada Upacara Manusa Yadnya Pawiwahan lan
-					Mepandes putra dan putri kami.
-				</div>
-				<h1 class="text-center pt-5">Mempelai</h1>
-				<div class="flex items-center justify-center">
-					<img src={Line} alt="line" />
-				</div>
-				<div class="bg-white rounded-md mx-5 h-[60vh]">
-					<div class="flex items-center justify-center ">
-						<img src={Cik} alt="cik" />
-					</div>
-					<h1 class="text-[B57D30] text-center">Pande Kadek Cik Suarsa</h1>
-					<div class="text-center">
-						Putra Kedua dari pasangan <br />
-						Pande Made Lasia <br />&<br />Ni Made warni <br />Br. Juga Desa Mas, Kec. Ubud, Gianyar
-					</div>
-				</div>
-				<h1 class="text-center py-5">&</h1>
-				<div class="bg-white rounded-md mx-5 h-[68vh]">
-					<div class="flex items-center justify-center pt-8">
-						<img src={Atik} alt="cik" />
-					</div>
-					<h1 class="text-[B57D30] text-center">Ni Made Yatik Karnilasari</h1>
-					<div class="text-center">
-						Putri Kedua dari pasangan <br />
-						I Made Dogil <br />
-						& <br />Ni Wayan Gandri <br />
-						Br. Juga Desa Mas, Kec. Ubud, Gianyar
-					</div>
+				<h1 class="text-[B57D30] text-center">Pande Kadek Cik Suarsa</h1>
+				<div class="text-center">
+					Putra Kedua dari pasangan <br />
+					Pande Made Lasia <br />&<br />Ni Made warni <br />Br. Juga Desa Mas, Kec. Ubud, Gianyar
 				</div>
 			</div>
-			<div class="my-5">
-				<div class="text-center pt-5 px-5">
-					Merupakan suatu kehormatan & kebahagian kami apabila Bapak/Ibu/Saudara/i berkenan hadir
-					memberi doa restu pada :
+			<h1 class="text-center py-5">&</h1>
+			<div class="bg-white rounded-md mx-5 h-[68vh]">
+				<div class="flex items-center justify-center pt-8">
+					<img src={Atik} alt="cik" />
 				</div>
-				<h1 class="text-center pt-5">Mempelai</h1>
-				<div class="flex items-center justify-center">
-					<img src={Line} alt="line" />
-				</div>
-				<div class="text-center pt-5">
-					Senin, 26 Desember 2022 <br /> 11.30 WITA s/d Selesai <br /> Br. Juga Desa Mas, Kec. Ubud,
-					Gianyar.
-				</div>
-			</div>
-			<div class=" bg-[#D9D9D9] h-[227vh]">
-				<h1 class="text-center pt-5">Photo Gallery​</h1>
-				<div class="flex items-center justify-center">
-					<img src={Line} alt="line" />
-				</div>
-				<div class="grid gap-5 py-5">
-					{#each Gallery as items}
-						<img src={items.url} alt={items.description} class=" w-full h-auto px-5 gap-5" />
-					{/each}
-				</div>
-			</div>
-			<div>
-				<h1 class="text-center pt-5">Buku Tamu​</h1>
-				<div class="flex items-center justify-center">
-					<img src={Line} alt="line" />
+				<h1 class="text-[B57D30] text-center">Ni Made Yatik Karnilasari</h1>
+				<div class="text-center">
+					Putri Kedua dari pasangan <br />
+					I Made Dogil <br />
+					& <br />Ni Wayan Gandri <br />
+					Br. Juga Desa Mas, Kec. Ubud, Gianyar
 				</div>
 			</div>
 		</div>
-	{/if}
+		<div class="my-5">
+			<div class="text-center pt-5 px-5">
+				Merupakan suatu kehormatan & kebahagian kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+				memberi doa restu pada :
+			</div>
+			<h1 class="text-center pt-5">Mempelai</h1>
+			<div class="flex items-center justify-center">
+				<img src={Line} alt="line" />
+			</div>
+			<div class="text-center pt-5">
+				Senin, 26 Desember 2022 <br /> 11.30 WITA s/d Selesai <br /> Br. Juga Desa Mas, Kec. Ubud, Gianyar.
+			</div>
+		</div>
+		<div class=" bg-[#D9D9D9] h-[227vh]">
+			<h1 class="text-center pt-5">Photo Gallery​</h1>
+			<div class="flex items-center justify-center">
+				<img src={Line} alt="line" />
+			</div>
+			<div class="grid gap-5 py-5">
+				{#each Gallery as items}
+					<img src={items.url} alt={items.description} class=" w-full h-auto px-5 gap-5" />
+				{/each}
+			</div>
+		</div>
+		<div>
+			<h1 class="text-center pt-5">Buku Tamu​</h1>
+			<div class="flex items-center justify-center">
+				<img src={Line} alt="line" />
+			</div>
+		</div>
+	</div>
 </section>
