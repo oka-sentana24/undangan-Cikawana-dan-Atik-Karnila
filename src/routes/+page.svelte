@@ -16,7 +16,7 @@
 	import Gallery_5 from '$lib/images/gallery_5.jpg';
 	import Gallery_6 from '$lib/images/gallery_6.jpg';
 	import Gallery_7 from '$lib/images/gallery_7.jpg';
-	import Carousel from 'svelte-carousel';
+	// import Carousel from 'svelte-carousel';
 	import { fly } from 'svelte/transition';
 	const slideShow = [
 		{
@@ -101,7 +101,8 @@
 				</div>
 			</div>
 			<div class="relative">
-				<Carousel
+				<img src={Slide1} alt="" />
+				<!-- <Carousel
 					bind:this={carousel}
 					let:loaded
 					autoplay
@@ -115,7 +116,7 @@
 							{/if}
 						</div>
 					{/each}
-				</Carousel>
+				</Carousel> -->
 				<div class="absolute bottom-[30px] text-center text-white px-5">
 					" Ya Tuhan, anugerahkanlah kepada pasangan pengantin ini kebahagiaan, keduanya tiada
 					terpisahkan dan panjang umur. Semoga pengantin ini dianugerahkan putra dan cucu yang
