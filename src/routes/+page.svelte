@@ -113,7 +113,7 @@
 					</div>
 				</div>
 			</div>
-			<div class=" bg-[#D9D9D9] h-[190vh]">
+			<div class=" bg-[#D9D9D9] h-auto py-5">
 				<div class=" flex items-center justify-center py-10 px-5">
 					<img src={Omswatiastu} alt="omswatiastu" />
 				</div>
@@ -126,7 +126,7 @@
 				<div class="flex items-center justify-center">
 					<img src={Line} alt="line" />
 				</div>
-				<div class="bg-white rounded-md mx-5 h-[60vh]">
+				<div class="bg-white rounded-md mx-5 h-auto py-5">
 					<div class="flex items-center justify-center ">
 						<img src={Cik} alt="cik" />
 					</div>
@@ -137,7 +137,7 @@
 					</div>
 				</div>
 				<h1 class="text-center py-5">&</h1>
-				<div class="bg-white rounded-md mx-5 h-[68vh]">
+				<div class="bg-white rounded-md mx-5 h-auto py-5">
 					<div class="flex items-center justify-center pt-8">
 						<img src={Atik} alt="cik" />
 					</div>
@@ -164,7 +164,7 @@
 					Gianyar.
 				</div>
 			</div>
-			<div class=" bg-[#D9D9D9] h-[227vh]">
+			<div class=" bg-[#D9D9D9] h-auto py-5">
 				<h1 class="text-center pt-5">Photo Gallery​</h1>
 				<div class="flex items-center justify-center">
 					<img src={Line} alt="line" />
