@@ -178,7 +178,7 @@
 					<img src={Line} alt="line" />
 				</div>
 				<div class="text-center pt-5 font-bold">
-					Senin, 26 Desember 2022 <br /> 11.30 WITA s/d Selesai <br /> Br. Juga Desa Mas, Kec. Ubud,
+					Senin, 26 Desember 2022 <br /> 13.00 WITA s/d Selesai <br /> Br. Juga Desa Mas, Kec. Ubud,
 					Gianyar.
 				</div>
 				<div class=" w-full py-5 flex items-center justify-center">
