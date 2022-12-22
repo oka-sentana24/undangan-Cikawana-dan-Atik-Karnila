@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../routes/styles.css';
 	import Ukiran from '$lib/images/ukiran.svg';
 	import Omswatiastu from '$lib/images/omswatiastu.svg';
@@ -16,8 +16,13 @@
 	import Gallery_5 from '$lib/images/gallery_5.jpg';
 	import Gallery_6 from '$lib/images/gallery_6.jpg';
 	import Gallery_7 from '$lib/images/gallery_7.jpg';
+	import Musik from '$lib/images/tetaman.mp3';
 	// import Carousel from 'svelte-carousel';
 	import { fly } from 'svelte/transition';
+	import { queryParam } from 'sveltekit-search-params';
+	import { onMount } from 'svelte';
+
+	const to = queryParam('to');
 	const slideShow = [
 		{
 			url: `${Slide1}`,
@@ -64,6 +69,16 @@
 	];
 	let isOpen = true;
 	// let carousel;
+	let celebration: HTMLAudioElement;
+
+	onMount(() => {
+		celebration.play();
+
+		setTimeout(() => {
+			celebration.pause();
+			celebration.currentTime = 0;
+		}, 1000);
+	});
 </script>
 
 <section>
@@ -78,7 +93,7 @@
 					</div>
 					<div class="text-center text-white">
 						<span> Kepada Bapak/Ibu/Saudara/i </span>
-						<h2 class="text-2xl">OKA</h2>
+						<h2 class="text-2xl">{$to}</h2>
 						<span> Gianyar | 26 Desember 2022 </span>
 					</div>
 					<div class="text-center text-white mt-5">
@@ -92,6 +107,9 @@
 	{/if}
 
 	{#if !isOpen}
+		<audio controls autoplay>
+			<source src={Musik} type="audio/mpeg" />
+		</audio>
 		<div class="absolute top-0 w-full">
 			<div class="bg-black">
 				<div class="relative">
@@ -159,9 +177,14 @@
 				<div class="flex items-center justify-center">
 					<img src={Line} alt="line" />
 				</div>
-				<div class="text-center pt-5">
+				<div class="text-center pt-5 font-bold">
 					Senin, 26 Desember 2022 <br /> 11.30 WITA s/d Selesai <br /> Br. Juga Desa Mas, Kec. Ubud,
 					Gianyar.
+				</div>
+				<div class=" w-full py-5 flex items-center justify-center">
+					<a href="https://goo.gl/maps/oQobKMsJ9fpeJ18SA">
+						<button class="bg-blue-500 text-white w-32 h-10 rounded-md"> lokasi </button>
+					</a>
 				</div>
 			</div>
 			<div class=" bg-[#D9D9D9] h-auto py-5">
@@ -176,7 +199,7 @@
 				</div>
 			</div>
 			<div>
-				<h1 class="text-center pt-5">Buku Tamu​</h1>
+				<h1 class="text-center pt-5">Om Shanti Shanti Shanti Om​</h1>
 				<div class="flex items-center justify-center">
 					<img src={Line} alt="line" />
 				</div>
