@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../routes/styles.css';
 </script>
 

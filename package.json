@@ -38,6 +38,8 @@
 	"dependencies": {
 		"@mdi/font": "^7.1.96",
 		"@mdi/js": "^7.1.96",
+		"@sveltejs/adapter-static": "^1.0.0",
+		"@sveltejs/adapter-vercel": "^1.0.0",
 		"mdi-icons": "^1.0.1",
 		"svelte-materialify": "^0.3.11"
 	}
