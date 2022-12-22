@@ -164,7 +164,7 @@
 						Putri Kedua dari pasangan <br />
 						I Made Dogil <br />
 						& <br />Ni Wayan Gandri <br />
-						Br. Juga Desa Mas, Kec. Ubud, Gianyar
+						Br. Dangin jalan, Desa Guwang,Kec Sukawati, Gianyar
 					</div>
 				</div>
 			</div>
